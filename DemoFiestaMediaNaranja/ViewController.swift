@@ -25,18 +25,31 @@ class ViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if segue.identifier == "Select Birthday"{
-            if let bvc = segue.destination as? BIrthdayViewController{
-            // To guarantee the value
-            if let b = myBirthday{
-                bvc.birthday = b
-                }
-            }
-        }
+
     }
 
+    //Update bithday Label
+    
+    func updateBL(){
+        if let bd = myBirthday{
+            birthdayLabel.text = "Nací \(bd)"
+        }else{
+            birthdayLabel.text = "No se cuando naci"
+        }
+    }
+    
     @IBAction func goHome(_ segue: UIStoryboardSegue) {
         // only con IBAction appear in the graphic
+        if segue.identifier == "sb ok"{
+            
+            // If ok i introduce
+            myBirthday = bvc.birthday
+            updateBL()
+            
+        }else if segue.identifier == "sb cancel"{
+            
+        }
+        
     }
 
 }

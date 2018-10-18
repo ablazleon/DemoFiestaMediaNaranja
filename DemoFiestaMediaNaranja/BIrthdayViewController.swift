@@ -43,7 +43,11 @@ class BIrthdayViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "sb ok"{
             
-        }else if{
+            // If ok i introduce
+            birthday = birthdayPicker.date
+            
+        }else if segue.identifier == "sb cancel"{
+            
             
         }
     }
