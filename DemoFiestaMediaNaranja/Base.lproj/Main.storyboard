@@ -33,9 +33,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lef-Vt-q8G">
-                                <rect key="frame" x="234" y="43" width="80" height="30"/>
+                                <rect key="frame" x="245" y="43" width="58" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Seleccionar"/>
+                                <state key="normal" title="Cambiar"/>
+                                <connections>
+                                    <segue destination="Lry-nS-h9z" kind="presentation" identifier="Select Birhday" id="nCp-MX-Rbu"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿Cuándo naciste?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRk-rU-hTM">
                                 <rect key="frame" x="40" y="183" width="136" height="21"/>
@@ -93,14 +96,17 @@
                                 <state key="normal" title="Cancelar"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5p-0k-OHj">
-                                <rect key="frame" x="250" y="501" width="46" height="30"/>
+                                <rect key="frame" x="258" y="501" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Ok"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96073678060000001" green="1" blue="0.2825426425" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="bPC-gw-wN3"/>
                     </view>
+                    <connections>
+                        <outlet property="birthdayPicker" destination="W4n-Jj-YPT" id="AYZ-SK-Sdj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1P-Ci-U20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
