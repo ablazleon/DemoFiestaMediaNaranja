@@ -31,7 +31,16 @@ class ViewController: UIViewController {
     //Update bithday Label
     
     func updateBL(){
+        
         if let bd = myBirthday{
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            dateFormatter.timeStyle = .none
+            
+            // US English Locale (en_US)
+            dateFormatter.locale = Locale(identifier: "es_ES")
+            let t = dateFormatter.string(from: bd)
             birthdayLabel.text = "Nací \(bd)"
         }else{
             birthdayLabel.text = "No se cuando naci"
@@ -41,10 +50,21 @@ class ViewController: UIViewController {
     @IBAction func goHome(_ segue: UIStoryboardSegue) {
         // only con IBAction appear in the graphic
         if segue.identifier == "sb ok"{
+            if let bvc = segue.source as? BIrthdayViewController{
+                
+                if bvc.birthday > Date(){
+                    let alert = UIAlertController(title: "Mal", message: "Bájate del delorian", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title:"ok", style:.default))
+                    present(alert, animated: true)
+                }else {
+                
+                // If ok i introduce
+                myBirthday = bvc.birthday
+                updateBL()
+                }
+            }
             
-            // If ok i introduce
-            myBirthday = bvc.birthday
-            updateBL()
+           
             
         }else if segue.identifier == "sb cancel"{
             
