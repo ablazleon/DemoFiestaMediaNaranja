@@ -37,7 +37,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cambiar"/>
                                 <connections>
-                                    <segue destination="Lry-nS-h9z" kind="presentation" identifier="Select Birhday" id="nCp-MX-Rbu"/>
+                                    <segue destination="Lry-nS-h9z" kind="presentation" identifier="Select Birthday" id="nCp-MX-Rbu"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿Cuándo naciste?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRk-rU-hTM">
@@ -63,6 +63,9 @@
                         <color key="backgroundColor" red="1" green="0.82635833970685102" blue="0.93192358056322266" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="birthdayLabel" destination="96h-3U-yjW" id="xAD-Fl-B6w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -94,6 +97,9 @@
                                 <rect key="frame" x="40" y="501" width="61" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancelar"/>
+                                <connections>
+                                    <segue destination="a4o-b6-3DX" kind="unwind" unwindAction="goHome:" id="Je6-f3-AU6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5p-0k-OHj">
                                 <rect key="frame" x="258" y="501" width="30" height="30"/>
@@ -109,6 +115,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1P-Ci-U20" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="a4o-b6-3DX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="649" y="142"/>
         </scene>

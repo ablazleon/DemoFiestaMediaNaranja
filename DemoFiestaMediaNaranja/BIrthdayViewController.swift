@@ -10,9 +10,18 @@ import UIKit
 
 class BIrthdayViewController: UIViewController {
 
+    var birthday: Date = Date()
+    // I asign today's date
+    
+    @IBOutlet weak var birthdayPicker: UIDatePicker!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        birthdayPicker.date = birthday
+        // I introduce birthday
+        
         // Do any additional setup after loading the view.
     }
 
@@ -31,5 +40,13 @@ class BIrthdayViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "sb ok"{
+            
+        }else if{
+            
+        }
+    }
+    
 
 }
