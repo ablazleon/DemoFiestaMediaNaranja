@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-
+        
     }
 
     //Update bithday Label
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
             // US English Locale (en_US)
             dateFormatter.locale = Locale(identifier: "es_ES")
             let t = dateFormatter.string(from: bd)
-            birthdayLabel.text = "Nací \(bd)"
+            birthdayLabel.text = "Nací \(t)"
         }else{
             birthdayLabel.text = "No se cuando naci"
         }
